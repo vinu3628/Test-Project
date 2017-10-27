@@ -1,0 +1,108 @@
+
+
+3)\\ select first_name,last_name,department_id from employees where last_name='McEwen';
+
+
+4)\\select * from employees where department_id  is null;
+
+
+5)\\select * from departments where department_name ='Marketing';
+
+6)\\ select first_name||''||last_name as employee_name, department_id,salary,hire_date from employees
+ where first_name not like '%M%' and first_name not like '%m%' order by department_id asc;
+ 
+ 7)\\ select * from employees where salary between 8000 and 12000 
+ and commission_pct is not null
+ or department_id not in (40,120,70) and hire_date <'5-jun-1987';
+ 
+ 8)\\ 
+      select first_name||''||last_name , salary,commission_pct from employees where commission_pct is  null;
+
+ 9)\\ 
+    select first_name||''||last_name as employee_name,phone_number||'-'||email as contact_details 
+    ,salary as remuneration from employees where salary between 9000 and 17000;
+
+10)\\ select first_name||''||last_name as employee_name,salary from employees
+ where first_name  like '%M' 
+            or
+       select first_name||''||last_name as employee_name,salary from employees
+ where first_name  like '%m' 
+      
+ 11)\\  select first_name||''||last_name as employee_name,salary from employees 
+ where salary not  between 7000 and 15000 order by employee_name asc;
+ 
+ 12)\\ select first_name||''||last_name as employee_name,salary,hire_date,job_id from employees
+ where hire_date between '5-nov-2007' and '5-jul-2009' order by employee_name asc;
+ 
+ 13)\\ select first_name||''||last_name as employee_name, department_id from employees where department_id=70 or department_id= 90;
+ 
+14)\\ 
+
+15)\\ select * from employees where hire_date<='21-jun-2002';
+
+
+16)\\ select first_name,last_name,salary,manager_id,email from employees where manager_id in (120,103,145);
+
+17)\\ select * from employees  where first_name like '%d%'and first_name like '%s%' and  first_name like'%n%' order by salary desc;
+
+
+18)\\ select first_name||''||last_name as employee_name,phone_number||'-'||email as contact_details,
+salary, hire_date,commission_pct  from employees
+where salary>11000 or phone_number like '______3%'
+order by first_name desc;
+
+
+19)\\ select first_name,last_name,department_id from employees where first_name like '__s%';
+
+20)\\ select first_name,department_id,employee_id,job_id from employees where department_id not in (50,30,80);
+ 
+21)\\ select first_name,department_id,employee_id,job_id from employees where department_id = (50,30,80);
+
+select * from JOB_HISTORY
+select * from jobs
+
+22)\\  
+
+
+23)\\ select count(*), sum(salary),max(salary)-min(salary) as salary_difference from employees group by job_id;
+
+24)\\ select job_id ,count(*)  from job_history where  end_date-start_date  > 300  group by job_id having count(*)>=2;
+
+ 
+25)\\ 
+ select country_id, count(city) from locations group by country_id;
+ 
+ 
+ 26)\\ select manager_id,count(*) from employees group  by manager_id;
+ 
+ 27)\\  select * from jobs order by job_title desc;
+
+ 28)\\ select first_name,last_name,hire_date,JOB_ID from employees where  job_id in ('SA_REP OR  SA_MAN');
+  select * from employees;
+  
+29)\\ select  department_id,avg(salary) from employees where commission_pct is  not null  group by department_id;
+
+
+30)\\
+
+select * from jobs 
+
+31)\\ select department_id from employees where commission_pct is not null group by department_id  having count(commission_pct)>10;
+ 
+33)\\  select employee_id,salary ,commission_pct,department_id from employees where commission_pct is  null 
+and salary between 7000 and 12000 and department_id =50; 
+
+34)\\ 
+ select job_id ,avg(salary) from employees where  salary >8000 group by job_id ;
+
+35)\\select job_title,max_salary-min_salary as salary_difference from jobs where  max_salary between 12000 and 18000 ;
+
+select * from job_history 
+
+36)\\ select * from employees where first_name like 'D%'  and last_name like 'D%'; 
+
+
+
+37)\\ select * from jobs where  min_salary>9000; 
+
+38)\\ select * from employees where hire_date >'07-sep-1987';

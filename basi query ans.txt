@@ -1,0 +1,25 @@
+1.select sum(purchase_amount)from orders;
+
+
+2.select avg(purchase_amount)from orders;
+
+
+3.select count(distinct sales_id)from orders;
+
+
+4.select count(*)from customer;
+
+5.select count(all grade)from customers;
+
+
+6.select max(purchase_amt)from orders;
+
+
+7.select min(purchase_amt)from orders
+
+8.select city,max(grade)from customergroup by city;
+
+
+9.select customer_id,max(purchase_amt)from orders group by customer_id; 
+
+10.select customer_id,order_date,max(purchase_amt) from oredrs  group by customer_id,order_date;
